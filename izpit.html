@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="en">
+
+
+<style>
+
+#banner-message {
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 25px;
+  text-align: center;
+  transition: all 0.2s;
+  margin: 0 auto;
+  width: 500px;
+}
+
+#breed_data {
+  background: #b2b2b2;
+  border-radius: 4px;
+  padding: 20px;
+  font-size: 12px;
+  text-align: left;
+  transition: all 0.2s;
+  margin: 0 auto;
+  width: 500px;
+}
+
+#breed_image {
+  background: #fff;
+  margin: 0 auto;
+  width: 460px;
+}
+
+
+
+
+
+
+
+.clear{
+clear: both;
+}
+.more {display: none;}
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 40%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+
+}
+
+/* Add a background color when the inputs get focus */
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #0a56f0;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+float: right;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: #474e5d;
+  padding-top: 50px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+/* Style the horizontal ruler */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+ 
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 35px;
+  top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #f1f1f1;
+}
+
+.close:hover,
+.close:focus {
+  color: #f44336;
+  cursor: pointer;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+     width: 100%;
+  }
+}
+
+</style>
+
+
+  <head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>exaple</title>
+  </head>
+  <body>
+
+ <div class="container">
+
+
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="d-flex align-items-center h-100">
+                    <i class="fas fa-paw"></i>
+                    <span class="ml-3 header-label"><h1>ZooDog</h1></span>   
+                </div>
+            </div>
+            <div class="col-md-6 mb-3 mb-md-0"> 
+                <div class="d-flex">
+                    <div class="icon-container bg-white text-primary d-flex flex-column p-2 p-md-3 align-items-center justify-content-center rounded">
+                        
+                        <button type="button" class="btn btn-success"> <i class="fas fa-home"></i><br>Начало</button>
+                    </div> 
+                    <div class="icon-container bg-white text-danger d-flex flex-column p-2 p-md-3 align-items-center justify-content-center rounded">
+                        
+                       <button type="button" class="btn btn-danger"> <i class="fas fa-address-card"></i><br> За нас</button>
+                    </div>
+                    <div class="icon-container bg-white text-warning d-flex flex-column p-2 p-md-3 align-items-center justify-content-center rounded">
+                       
+                        <button type="button" class="btn btn-info"> <i class="fas fa-book-open"></i> <br>Факти</button>
+                    </div>
+                    <div class="icon-container bg-white text-success d-flex flex-column p-2 p-md-3 align-items-center justify-content-center rounded">
+                        
+                        <button type="button" class="btn btn-secondary"> <i class="fas fa-arrow-left"></i><br>Изход</button>
+                    </div>
+                </div>    
+            </div>
+        </div>
+        <div class="row mt-3 d-md-flex d-none">
+            <div class="col">
+                <div class="bg-white">
+                    <div class="row">
+                        <div class="col">
+                            <img class="img-fluid" src="640-420-vizhte-fredi-najgoliamoto-kuche-v-sveta-snimki-video.jpg">   
+                        </div>
+                        <div class="col">
+                            <div class="py-5 px-2">
+                                <h1 class="text-primary">Добре дошли! <i class="far fa-smile"></i></h1>  
+                                <p class="my-4">Четириногият домашен любимец е познат на хората от много векове насам. Признат и обичан , заради своята преданост и любвеобилност , той е част от много семейства и в днешно време. Кучето е предпочитан , верен и незаменим другар от деца , родители и възрастни хора. Грижите , които се полагат за това мило същество не са малко , но то се отплаща всеки миг на стопаните си с многобройни жестове , които изпълват един дом с много живот и положителни емоции. 
+                                	<span id="dots">...</span><span id="more">Животът му , незнайно как е предопределен да служи на човека в най- различни аспекти от ежедневието му. Едно куче може да спаси човешки живот и в буквалния и в преносния смисъл , изпълвайки душата на един тъжен или самотен човек с много радостни и незабравими моменти.</span></p>
+						
+				<button onclick="myFunction()" id="myBtn">Read more</button>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div id="banner-message">
+  <p>Select a Breed</p>
+
+  <input id="breed_search" />
+
+  <select class="breed_select">
+    <option></option>
+</select>
+
+</div>
+<div id="breed_data">
+  <img id="breed_image" src="https://api.thedogapi.com/v1/images/search" />
+  <p>
+    Breed Data
+  </p>
+  <table id="breed_data_table">
+
+  </table>
+</div>
+
+
+
+        <div class="row mt-5">
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="bg-primary text-white p-4 rounded d-flex d-md-block align-items-center">
+                    <div class="product-icon-container text-center text-md-left">
+                        <i class="fas fa-bone"></i>
+                    </div>
+                    <h3 class="my-0 mt-md-3 ml-3 ml-md-0">Храна</h3>
+                    <p class="mt-3 d-none d-md-block">Чрез храната четириногото трябва да си набавя достатъчно въглехидрати, протеини, мазнини, витамини и минерали ако искате то да бъде в добро здраве.
+
+ Какво точно трябва да ядат кучетата се спори отдавна и няма едно мнение. Това за съжаление изобщо не прави нещата по-лесни.
+
+Затова най-добре е да храните кучето си така, както вие самите намирате за правилно.
+		</p>
+                </div>
+                
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="bg-danger text-white p-4 rounded d-flex d-md-block align-items-center">
+                    <div class="product-icon-container text-center text-md-left">
+                       <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="my-0 mt-md-3 ml-3 ml-md-0">Игра</h3>
+                    <p class="mt-3 d-none d-md-block">Изпoлзвaнeтo нa пoлoжитeлнa нaглaca пpи yчeнeтo нa нoви тpиĸoвe и ĸoмaнди ĸapa цeлият пpoцec дa изглeждa пoвeчe ĸaтo игpa, oтĸoлĸoтo ĸaтo нeщo тpyднo и oтeгчитeлнo в oчитe нa ĸyчeтo.
+			Поддържайте тренировъчните сесии кратки, 5-10 минути, няколко пъти на ден.Подходящото поощряване много бързо ще превърнат домашния любимец в щастливо и здраво куче</p>
+
+                </div>
+            </div>
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="bg-warning text-white p-4 rounded d-flex d-md-block align-items-center">
+                    <div class="product-icon-container text-center text-md-left">
+                     <i class="fas fa-medkit"></i>
+                    </div>
+                    <h3 class="my-0 mt-md-3 ml-3 ml-md-0">Здраве</h3>
+                    <p class="mt-3 d-none d-md-block">КАК ДА ОПРЕДЕЛИМ ЧЕ КУЧЕТО Е БОЛНО?
+Помнете, че кучетата не могат сами да се оплачат, затова тяхното здраве се намира във вашите ръце.Признаци за здраво животно са също така бодрост и подвижност. Важни критерии при оценка на състоянието на здравето са температурата, пулса и дихателната честота.
+			</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+<div class="row row-cols-1 row-cols-md-2">
+  <div class="col mb-4">
+                <div class="card">
+                    <img class="card-img-top" src="unnamed.jpg" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">Карта за отстъпки</h5>
+                      <p class="card-text">Влезте в профила си! Или си направете регистрация!</p>
+
+						<form>
+    	 Име:<br><input type="Firstname" class="form-control" id="exampleDropdownFormFirstname" placeholder="Иван">
+   	 Фамилия: <br><input type="Lastname" class="form-control" id="exampleDropdownFormLastname" placeholder="Иванов">
+	 Имейл: <br>   <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com"><br>
+
+</form>
+
+<button type="button" class="btn btn-danger">Влез:</button> <button type="button" class="btn btn-info">Регистрация:</button>
+</div>
+</div>
+</div>
+
+<div class="card-deck">
+  <div class="card">
+    <img src="images.jpg" class="card-img-top" alt="Последвайте ни и в социалните мрежи">
+    <div class="card-body">
+      <h5 class="card-title">Facebook</h5>
+      <p class="card-text">
+За всички които обичат и имат кучета за домашни любимци
+Всичко свързано с домашните ни любимци.. 
+<a href=""><i class="fab fa-facebook"></i></a></p>
+    </div>
+
+  </div>
+  <div class="card">
+    <img src="GJHLQB5IDBJJPIXHVK4F77C4LM.jpg" class="card-img-top" alt="Последвайте ни и в социалните мрежи">
+    <div class="card-body">
+      <h5 class="card-title">Instagram</h5>
+      <p class="card-text">Покажете снимките им на всички,те го заслужават!
+<a href=""><i class="fab fa-instagram-square"></i></a></p>
+    </div>
+ 
+  </div>
+  
+  </div>
+</div>
+
+
+
+
+<script>
+function myFunction() {
+  var dots = document.getElementById("dots");
+  var moreText = document.getElementById("more");
+  var btnText = document.getElementById("myBtn");
+
+  if (dots.style.display === "none") {
+    dots.style.display = "inline";
+    btnText.innerHTML = "Read more"; 
+    moreText.style.display = "none";
+  } else {
+    dots.style.display = "none";
+    btnText.innerHTML = "Read less"; 
+    moreText.style.display = "inline";
+  }
+}
+</script>
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Option 2: jQuery, Popper.js, and Bootstrap JS
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+    -->
+
+<script>
+// Made to demonstrate how to use JQuery and TheDogAPI to load breed list, and show a breed image and data on selection. 
+
+var breeds;
+
+$('#breed_search').on('input', function(e) {
+  var search_str = $(this).val();
+  searchBreeds(search_str);
+});
+
+function searchBreeds(search_str) {
+  var string_length = search_str.length // get the length of the search string so we know how many characters of the breed name to compare it to
+  search_str = search_str.toLowerCase(); // ensure search string and breed name are same case otherwise they won't match
+  for (var i = 0; i < breeds.length; i++) // loop through all the breeds in order
+  {
+    var breed_name_snippet = breeds[i].name.substr(0, string_length).toLowerCase(); // get the first few cahracters of the name
+    if (breed_name_snippet == search_str) {
+      getDogByBreed(breeds[i].id) // show the breed just as we did in the Select demo
+      return; // return the function so we don't keep searching
+    }
+  }
+}
+
+// Setup the Controls
+var $breed_select = $('select.breed_select');
+$breed_select.change(function() {
+  var id = $(this).children(":selected").attr("id");
+  getDogByBreed(id)
+});
+
+
+// Load all the Breeds
+function getBreeds() {
+  ajax_get('https://api.thedogapi.com/v1/breeds', function(data) {
+    populateBreedsSelect(data)
+    breeds = data
+  });
+}
+// Put the breeds in the Select control
+function populateBreedsSelect(breeds) {
+  $breed_select.empty().append(function() {
+    var output = '';
+    $.each(breeds, function(key, value) {
+      output += '<option id="' + value.id + '">' + value.name + '</option>';
+    });
+    return output;
+  });
+}
+// triggered when the breed select control changes
+function getDogByBreed(breed_id) {
+  // search for images that contain the breed (breed_id=) and attach the breed object (include_breed=1)
+  ajax_get('https://api.thedogapi.com/v1/images/search?include_breed=1&breed_id=' + breed_id, function(data) {
+
+    if (data.length == 0) {
+      // if there are no images returned
+      clearBreed();
+      $("#breed_data_table").append("<tr><td>Sorry, no Image for that breed yet</td></tr>");
+    } else {
+      //else display the breed image and data
+      displayBreed(data[0])
+    }
+  });
+}
+// clear the image and table
+function clearBreed() {
+  $('#breed_image').attr('src', "");
+  $("#breed_data_table tr").remove();
+}
+// display the breed image and data
+function displayBreed(image) {
+  $('#breed_image').attr('src', image.url);
+  $("#breed_data_table tr").remove();
+
+  var breed_data = image.breeds[0]
+  $.each(breed_data, function(key, value) {
+    // as 'weight' and 'height' are objects that contain 'metric' and 'imperial' properties, just use the metric string
+    if (key == 'weight' || key == 'height') value = value.metric
+    // add a row to the table
+    $("#breed_data_table").append("<tr><td>" + key + "</td><td>" + value + "</td></tr>");
+  });
+}
+
+// make an Ajax request
+function ajax_get(url, callback) {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+      console.log('responseText:' + xmlhttp.responseText);
+      try {
+        var data = JSON.parse(xmlhttp.responseText);
+      } catch (err) {
+        console.log(err.message + " in " + xmlhttp.responseText);
+        return;
+      }
+      callback(data);
+    }
+  };
+
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
+}
+// call the getBreeds function which will load all the Dog breeds into the select control
+getBreeds();
+
+</script>
+
+
+<script>
+
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
